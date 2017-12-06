@@ -2,8 +2,47 @@
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Client circular = new Client("Client Universitario", 20, "UFRN", "001.222.345", "075.573.249", 54321);
+		Client tesla = new Client("Client Entrepeneur", 28, "Silicon", "002.333.456", "086.684.350", 98765);
+		
+		System.out.println("Clients createds!");
+		System.out.println("");
 
+		University uni = new University(circular);
+		Platinum pla = new Platinum(tesla);
+		
+		System.out.println("Cards createds!");
+		System.out.println("");
+		
+		System.out.println("======================");
+		System.out.println();
+		
+		System.out.println("Check Cartão Universitário: ");
+		System.out.println("└─Dono: " + uni.getOwner().getName());
+		System.out.println("└─Nº do cartão: " + uni.getCardNumber());
+		System.out.println("└─Validade: " + uni.getExpMonth() + "/" + uni.getExpYear());
+		System.out.println("└─Limite do cartão: $" + uni.getLimit());
+		System.out.println("└─Crédito disponível: $" + uni.getCredit());
+		
+		System.out.println();
+		
+		System.out.println("Check Cartão Platina: ");
+		System.out.println("└─Dono: " + pla.getOwner().getName());
+		System.out.println("└─Nº do cartão: " + pla.getCardNumber());
+		System.out.println("└─Validade: " + pla.getExpMonth() + "/" + pla.getExpYear());
+		
+		System.out.println();
+		System.out.println("======================");
+		System.out.println();
+		
+		
+		System.out.println("UNIVERSITÁRIO");
+		uni.myStatus(circular.getPass());
+		
+		
+		System.out.println();
+		System.out.println("PLATINA");
+		pla.myStatus(tesla.getPass());
 	}
 
 }

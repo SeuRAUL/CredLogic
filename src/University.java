@@ -96,7 +96,7 @@ public class University extends Card {
 	 @ requires pass == pass;
 	 */
 	public/*@ pure @*/ void myCredit(int pass) {
-		System.out.println("You have: $" + this.bill + " of credit.");
+		System.out.println("You have: $" + this.credit + " of credit.");
 	}
 	
 	
