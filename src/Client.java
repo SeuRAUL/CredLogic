@@ -4,12 +4,12 @@
  *
  */
 public class Client {
-	public	/* @ spec_public @*/ String name;
-	public /* @ spec_public @*/ int age;
-	public /* @ spec_public @*/ String address;
-	public /* @ spec_public @*/ String rg;
-	public /* @ spec_public @*/ String cpf;
-	public /* @ spec_public @*/ int pass;
+	public /*@ spec_public @*/ String name;
+	public /*@ spec_public @*/ int age;
+	public /*@ spec_public @*/ String address;
+	public /*@ spec_public @*/ String rg;
+	public /*@ spec_public @*/ String cpf;
+	public /*@ spec_public @*/ int pass;
 	 //@ public invariant name != "";
 	 //@ public invariant age > 0;
 	 //@ public invariant address != "";
