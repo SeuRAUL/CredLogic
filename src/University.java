@@ -121,10 +121,12 @@ public class University extends Card {
 	public void useCard(double purchaseValue, int pass) {
 		// TODO Auto-generated method stub
 		// super.useCard(purchaseValue, pass);
+		
 		if (pass == owner.getPass()) {
-			this.credit -= purchaseValue;
-			this.bill += purchaseValue;
-			this.parcels.set(0, this.parcels.firstElement() + purchaseValue);
+			this.credit = this.credit - purchaseValue;
+			this.bill = this.bill + purchaseValue;
+			double newValue = this.parcels.firstElement() + purchaseValue;
+			this.parcels.set(0, newValue);
 		}
 	}
 
@@ -140,6 +142,7 @@ public class University extends Card {
 	 */
 	public void parcelBill(double value, int quantParcels) {
 		double parcelValues = (value / quantParcels) * (1+bankInterstRate);
+		this.parcels.remove(0);
 		for (int i = 0; i < this.parcels.size(); i++) {
 			this.parcels.set(i, this.parcels.elementAt(i) + parcelValues);
 		}

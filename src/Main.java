@@ -35,13 +35,60 @@ public class Main {
 		System.out.println("======================");
 		System.out.println();
 		
-		
-		System.out.println("UNIVERSITÁRIO");
+		System.out.println("╔═════════════╗");
+		System.out.println("║UNIVERSITÁRIO║");
+		System.out.println("╚═════════════╝");
 		uni.myStatus(circular.getPass());
+		System.out.println();
+		
+		System.out.println("Compra de 100");
+		uni.useCard(100, circular.getPass());
+		System.out.println();
+		
+		uni.myStatus(circular.getPass());
+		System.out.println();
+		
+		System.out.println("Compra de 200");
+		uni.useCard(200, circular.getPass());
+		System.out.println();
+		
+		uni.myStatus(circular.getPass());
+		System.out.println();
+		
+		System.out.println("Parcelar Fatura");
+		uni.parcelBill(300, 3);
+		System.out.println();
+		
+		uni.myStatus(circular.getPass());
+		System.out.println();
 		
 		
 		System.out.println();
-		System.out.println("PLATINA");
+		System.out.println("╔═══════╗");
+		System.out.println("║PLATINA║");
+		System.out.println("╚═══════╝");
+		pla.myStatus(tesla.getPass());
+		
+		System.out.println();
+		System.out.println("Compra de 10.000");
+		pla.useCard(10000, tesla.getPass());
+		System.out.println();
+		
+		pla.myStatus(tesla.getPass());
+		
+		System.out.println();
+		System.out.println("Compra de 8.000");
+		pla.useCard(8000, tesla.getPass());
+		System.out.println();
+		
+		pla.myStatus(tesla.getPass());
+		
+		
+		System.out.println();
+		System.out.println("Pagar 10.000");
+		pla.payBill(10000, tesla.getPass());
+		System.out.println();
+		
 		pla.myStatus(tesla.getPass());
 	}
 
